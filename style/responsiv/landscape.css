@@ -12,6 +12,12 @@
   form {
     width: 80%;
   }
+  #todo-list {
+    position: absolute;
+    top: 75%;
+    height: 80vh;
+    width: 80%;
+  }
   footer {
     height: 20vh;
   }

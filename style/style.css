@@ -96,7 +96,6 @@ footer {
   align-items: center;
   font-size: small;
 }
-
 #todo-list {
   position: absolute;
   top: 30%;
@@ -111,7 +110,7 @@ footer {
   overflow-x: hidden;
   overflow-y: hidden;
 }
-#todo {
+.todo {
   padding: 1em;
   display: flex;
   justify-content: space-between;
@@ -119,7 +118,7 @@ footer {
   font-size: medium;
   border-bottom: solid 2px var(--border-b);
 }
-#close-btn {
+.close-btn {
   display: flex;
   background-color: transparent;
   border: none;
