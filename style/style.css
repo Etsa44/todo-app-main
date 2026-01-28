@@ -1,0 +1,127 @@
+:root {
+  --bg-color: hsl(0, 0%, 98%);
+  --bg-image: url(/images/bg-mobile-light.jpg);
+  --bg-image-desktop: url(/images/bg-desktop-light.jpg);
+  --bg-form-color: white;
+  --text-color: black;
+  --border-b: hsl(233, 11%, 84%);
+}
+:root.dark {
+  --bg-color: hsl(235, 21%, 11%);
+  --bg-image: url(/images/bg-mobile-dark.jpg);
+  --bg-image-desktop: url(/images/bg-desktop-dark.jpg);
+  --border-b: hsl(233, 14%, 35%);
+  --bg-form-color: hsl(235, 24%, 19%);
+  --text-color: white;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
+}
+header {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header span {
+  color: white;
+  font-size: 2rem;
+}
+#hero_section {
+  height: 35vh;
+  width: 100%;
+  background-image: var(--bg-image);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+main {
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+}
+form {
+  background-color: var(--bg-form-color);
+  width: 90%;
+  padding: 1rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5em;
+}
+#theme-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.dark-icon,
+:root.dark .light-icon {
+  display: block;
+}
+:root .light-icon {
+  display: none;
+}
+:root.dark .dark-icon {
+  display: none;
+}
+#input_text {
+  width: 100%;
+  height: 2rem;
+  padding: 1rem;
+  border: none;
+  background-color: transparent;
+  font-size: medium;
+  color: var(--text-color);
+}
+#input_text:focus {
+  outline: none;
+}
+footer {
+  height: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: small;
+}
+
+#todo-list {
+  position: absolute;
+  top: 30%;
+  height: 60vh;
+  width: 90%;
+  background-color: var(--bg-form-color);
+  box-shadow:
+    0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 0.5em;
+  overflow: scroll;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+#todo {
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: medium;
+  border-bottom: solid 2px var(--border-b);
+}
+#close-btn {
+  display: flex;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}

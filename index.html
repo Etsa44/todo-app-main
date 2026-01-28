@@ -1,36 +1,108 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Todo app</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-
-  Todo
-
-  <!-- Add dynamic number --> items left
-
-  All
-  Active 
-  Completed
-
-  Clear Completed
-
-  Drag and drop to reorder list
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./style/style.css" />
+    <link rel="stylesheet" href="style/responsiv/desktop.css" />
+    <link rel="stylesheet" href="style/responsiv/landscape.css" />
+    <link rel="stylesheet" href="./style/checkbox.css" />
+    <link rel="stylesheet" href="style/checkbox-2.css" />
+    <script src="js/theme/favorit-theme.js"></script>
+    <title>Frontend Mentor | Todo app</title>
+  </head>
+  <body>
+    <div id="hero_section">
+      <header>
+        <span>TODO</span>
+        <button id="theme-btn">
+          <img
+            src="images/icon-moon.svg"
+            alt="Dark_mode_icon"
+            class="dark-icon"
+          />
+          <img
+            src="images/icon-sun.svg"
+            alt="Light_mode_icon"
+            class="light-icon"
+          />
+        </button>
+      </header>
+      <!-- formulaire -->
+      <form action="">
+        <div class="checkbox-wrapper-12">
+          <div class="cbx">
+            <input id="cbx-12" type="checkbox" />
+            <label for="cbx-12"></label>
+            <svg width="15" height="14" viewbox="0 0 15 14" fill="none">
+              <path d="M2 8.36364L6.23077 12L13 2"></path>
+            </svg>
+          </div>
+          <!-- Gooey-->
+          <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+            <defs>
+              <filter id="goo-12">
+                <fegaussianblur
+                  in="SourceGraphic"
+                  stddeviation="4"
+                  result="blur"
+                ></fegaussianblur>
+                <fecolormatrix
+                  in="blur"
+                  mode="matrix"
+                  values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -7"
+                  result="goo-12"
+                ></fecolormatrix>
+                <feblend in="SourceGraphic" in2="goo-12"></feblend>
+              </filter>
+            </defs>
+          </svg>
+        </div>
+        <input type="text" id="input_text" placeholder="Create a new todo..." />
+      </form>
+    </div>
+    <main>
+      <!-- todo list -->
+      <ul id="todo-list">
+        <li id="todo">
+          <div class="checkbox-wrapper-15">
+            <input
+              class="inp-cbx"
+              id="cbx-15"
+              type="checkbox"
+              style="display: none"
+            />
+            <label class="cbx" for="cbx-15">
+              <span>
+                <svg width="12px" height="9px" viewbox="0 0 12 9">
+                  <polyline points="1 5 4 8 11 1"></polyline>
+                </svg>
+              </span>
+              <span>todo la tache que je dois faire todo </span>
+            </label>
+          </div>
+          <button id="close-btn">
+            <img src="images/icon-cross.svg" alt="delete icon" />
+          </button>
+        </li>
+      </ul>
+    </main>
+    <footer class="attribution">
+      <p>
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">etsa</a>.
+      </p>
+    </footer>
+    <script src="js/theme/theme-mode.js"></script>
+    <script type="module" src="js/app.js"></script>
+    <script type="module" src="js/create-todo.js"></script>
+  </body>
 </html>
