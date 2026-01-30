@@ -4,6 +4,6 @@ export function createInput(uniqueId) {
   input.className = "inp-cbx";
   input.id = uniqueId;
   input.style.display = "none";
-
+  input.addEventListener("change", () => {});
   return input;
 }

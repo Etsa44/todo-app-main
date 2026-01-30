@@ -62,6 +62,7 @@ form {
   align-items: center;
   border-radius: 0.5em;
 }
+
 #theme-btn {
   background-color: transparent;
   border: none;
@@ -96,7 +97,7 @@ footer {
   align-items: center;
   font-size: small;
 }
-#todo-list {
+.todo-list-container {
   position: absolute;
   top: 30%;
   height: 60vh;
@@ -106,9 +107,16 @@ footer {
     0 4px 8px 0 rgba(0, 0, 0, 0.2),
     0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 0.5em;
-  overflow: scroll;
+  overflow: hidden;
+}
+.todo-list {
+  height: 90%;
+  width: 100%;
+  overflow-y: scroll;
   overflow-x: hidden;
-  overflow-y: hidden;
+}
+.todo-list::-webkit-scrollbar {
+  display: none;
 }
 .todo {
   padding: 1em;
@@ -123,4 +131,10 @@ footer {
   background-color: transparent;
   border: none;
   cursor: pointer;
+}
+.navbar {
+  background-color: var(--bg-form-color);
+  height: 10%;
+  width: 100%;
+  border-top: solid 2px var(--border-b);
 }

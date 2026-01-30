@@ -17,7 +17,7 @@
     height: 2rem;
     font-size: large;
   }
-  #todo-list {
+  .todo-list-container {
     top: 32%;
     width: 40%;
   }
