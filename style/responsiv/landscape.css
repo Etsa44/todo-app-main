@@ -7,18 +7,31 @@
     width: 80%;
   }
   main {
-    height: 60vh;
+    height: 100vh;
   }
+
   form {
     width: 80%;
   }
-  #todo-list {
-    position: absolute;
+  .todo-list-container {
     top: 75%;
     height: 80vh;
     width: 80%;
   }
+  .todo-list {
+    height: 80%;
+  }
+  .todo {
+    height: 25%;
+  }
+  .delete-box {
+    height: 20%;
+  }
+
+  .navigation {
+    bottom: -75%;
+    width: 80%;
+  }
   footer {
-    height: 20vh;
   }
 }

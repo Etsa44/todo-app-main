@@ -10,10 +10,13 @@
       href="./images/favicon-32x32.png"
     />
     <link rel="stylesheet" href="./style/style.css" />
+    <link rel="stylesheet" href="./style/header.css" />
+    <link rel="stylesheet" href="./style/main.css" />
+    <link rel="stylesheet" href="./style/footer.css" />
     <link rel="stylesheet" href="style/responsiv/desktop.css" />
     <link rel="stylesheet" href="style/responsiv/landscape.css" />
-    <link rel="stylesheet" href="./style/checkbox.css" />
-    <link rel="stylesheet" href="style/checkbox-2.css" />
+    <link rel="stylesheet" href="./style/composant/checkbox.css" />
+    <link rel="stylesheet" href="style/composant/checkbox-2.css" />
     <script src="js/theme/favorit-theme.js"></script>
     <title>Frontend Mentor | Todo app</title>
   </head>
@@ -69,9 +72,21 @@
     </div>
     <main>
       <!-- todo list -->
-      <div class="todo-list-container">
-        <ul id="todo-list"></ul>
-        <div class="navbar">etsa</div>
+      <div class="main-box">
+        <div class="todo-list-container">
+          <ul id="todo-list"></ul>
+          <div class="delete-box">
+            <span id="tasksNumberContainer">items left</span>
+            <button id="delete-all-button">Clear Complete</button>
+          </div>
+        </div>
+        <nav class="navigation">
+          <ul class="navigation-list">
+            <li><button>All</button></li>
+            <li><button>Active</button></li>
+            <li><button>Completed</button></li>
+          </ul>
+        </nav>
       </div>
     </main>
     <footer class="attribution">
@@ -88,5 +103,6 @@
     <script type="module" src="js/todo-feature/input.js"></script>
     <script type="module" src="js/todo-feature/label.js"></script>
     <script type="module" src="js/todo-feature/delete-button.js"></script>
+    <script type="module" src="js/todo-feature/delete-all.js"></script>
   </body>
 </html>

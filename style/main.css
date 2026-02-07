@@ -1,0 +1,94 @@
+main {
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+}
+.main-box {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.todo-list-container {
+  position: absolute;
+  top: 30%;
+  height: 50vh;
+  width: 90%;
+  background-color: var(--bg-form-color);
+  box-shadow:
+    0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 0.5em;
+  overflow: hidden;
+}
+.todo-list {
+  height: 85%;
+  width: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.todo-list::-webkit-scrollbar {
+  display: none;
+}
+.todo {
+  height: 20%;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: medium;
+  border-bottom: solid 2px var(--border-b);
+}
+.close-btn {
+  display: flex;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.delete-box {
+  height: 15%;
+  padding: 1rem;
+  color: var(--text-color-2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navigation {
+  position: absolute;
+  bottom: 10%;
+  width: 90%;
+  padding: 1rem;
+  box-shadow:
+    0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 0.5em;
+  background-color: var(--bg-form-color);
+}
+.navigation li {
+  list-style: none;
+}
+.navigation ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+.navigation button {
+  background-color: transparent;
+  border: none;
+  color: var(--text-color-2);
+  cursor: pointer;
+}
+#delete-all-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--text-color-2);
+}
+#tasksNumberContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
