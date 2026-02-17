@@ -80,6 +80,7 @@ main {
   border: none;
   color: var(--text-color-2);
   cursor: pointer;
+  font-weight: bold;
 }
 #delete-all-button {
   background-color: transparent;
@@ -91,4 +92,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.all {
+  color: hsl(220, 98%, 61%);
 }

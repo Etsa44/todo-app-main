@@ -4,7 +4,7 @@ const todoInput = document.getElementById("input_text");
 const checkBox = document.getElementById("cbx-12");
 const todoList = document.getElementById("todo-list");
 const tasksNumberContainer = document.getElementById("tasksNumberContainer");
-
+const allTask = document.getElementById("all");
 const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
 
 const tasksNumber = tasks.length;
@@ -13,11 +13,6 @@ span.textContent = tasksNumber;
 span.style.padding = "0px 4px";
 tasksNumberContainer.prepend(span);
 
-tasks.forEach((task) => {
-  const taskNode = createTask(task.tache);
-  todoList.className = "todo-list";
-  todoList.prepend(taskNode);
-});
 checkBox.disabled = true;
 
 function effect() {
@@ -25,10 +20,21 @@ function effect() {
 }
 todoInput.addEventListener("input", effect);
 
+window.addEventListener("DOMContentLoaded", () => {
+  tasks.forEach((task) => {
+    const taskNode = createTask(task.tache, task.id);
+    todoList.className = "todo-list";
+    todoList.prepend(taskNode);
+    allTask.style.color = "hsl(220, 98%, 61%)";
+  });
+});
+
 checkBox.addEventListener("change", function () {
+  const uniqueId = "task-" + Math.random().toString(36).substr(2, 9);
   if (this.checked) {
     const todo = todoInput.value.trim();
     const task = {
+      id: uniqueId,
       tache: todo,
       status: "in progress",
     };
@@ -37,7 +43,7 @@ checkBox.addEventListener("change", function () {
     tasks.push(task);
     localStorage.setItem("tasks", JSON.stringify(tasks));
 
-    const newTask = createTask(todo);
+    const newTask = createTask(todo, uniqueId);
     todoList.prepend(newTask);
 
     todoInput.value = "";

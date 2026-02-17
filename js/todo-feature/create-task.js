@@ -1,10 +1,8 @@
-import { createInput } from "./input.js";
-import { createLabel } from "./label.js";
-import { createDeleteButton } from "./delete-button.js";
+import { createInput } from "./components/input.js";
+import { createLabel } from "./components/label.js";
+import { createDeleteButton } from "./components/delete-button.js";
 
-export function createTask(text) {
-  const uniqueId = "cbx-" + Math.random().toString(36).substr(2, 9);
-
+export function createTask(text, uniqueId) {
   const li = document.createElement("li");
   li.className = "todo";
   const input = createInput(uniqueId);
@@ -21,6 +19,5 @@ export function createTask(text) {
     const remaining = tasks.filter((t) => t.tache !== text);
     localStorage.setItem("tasks", JSON.stringify(remaining));
   });
-
   return li;
 }
