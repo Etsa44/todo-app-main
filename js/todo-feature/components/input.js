@@ -9,6 +9,5 @@ export function createInput(uniqueId) {
   input.addEventListener("change", function () {
     completed(this.id, this.checked);
   });
-  console.log("Input id:", input.id);
   return input;
 }

@@ -14,6 +14,5 @@ export function createTask(text, uniqueId) {
   li.appendChild(input);
   li.appendChild(label);
   li.appendChild(deleteBtn);
-  console.log(li.innerHTML);
   return li;
 }

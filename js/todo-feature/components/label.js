@@ -27,6 +27,5 @@ export function createLabel(uniqueId, text) {
 
   label.appendChild(span1);
   label.appendChild(span2);
-  console.log("Label for:", uniqueId);
   return label;
 }
