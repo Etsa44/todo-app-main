@@ -4,20 +4,16 @@ import { createDeleteButton } from "./components/delete-button.js";
 
 export function createTask(text, uniqueId) {
   const li = document.createElement("li");
+  const liId = `li-${uniqueId}`;
+  li.id = liId;
   li.className = "todo";
   const input = createInput(uniqueId);
   const label = createLabel(uniqueId, text);
-  const deleteBtn = createDeleteButton();
+  const deleteBtn = createDeleteButton(uniqueId, liId);
 
   li.appendChild(input);
   li.appendChild(label);
   li.appendChild(deleteBtn);
-
-  deleteBtn.addEventListener("click", () => {
-    li.remove();
-    const tasks = JSON.parse(localStorage.getItem("tasks") || "[]");
-    const remaining = tasks.filter((t) => t.tache !== text);
-    localStorage.setItem("tasks", JSON.stringify(remaining));
-  });
+  console.log(li.innerHTML);
   return li;
 }

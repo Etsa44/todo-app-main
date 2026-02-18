@@ -1,4 +1,5 @@
-import { createTask } from "./todo-feature/create-task.js";
+import { createTask } from "./todo-feature/create-task-container.js";
+import { countTasks } from "./count-tasks.js";
 
 const todoInput = document.getElementById("input_text");
 const checkBox = document.getElementById("cbx-12");
@@ -7,11 +8,7 @@ const tasksNumberContainer = document.getElementById("tasksNumberContainer");
 const allTask = document.getElementById("all");
 const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
 
-const tasksNumber = tasks.length;
-const span = document.createElement("span");
-span.textContent = tasksNumber;
-span.style.padding = "0px 4px";
-tasksNumberContainer.prepend(span);
+tasksNumberContainer.prepend(countTasks());
 
 checkBox.disabled = true;
 

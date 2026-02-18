@@ -4,8 +4,7 @@ export function createLabel(uniqueId, text) {
   label.setAttribute("for", uniqueId);
 
   const span1 = document.createElement("span");
-  span1.id = "span-1";
-  span1.className = "span";
+  span1.className = "span span-1";
 
   const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
   svg.setAttribute("width", "12px");
@@ -23,11 +22,11 @@ export function createLabel(uniqueId, text) {
   span1.appendChild(svg);
 
   const span2 = document.createElement("span");
-  span2.id = "span-2";
-  span2.className = "span";
+  span2.className = "span span-2";
   span2.textContent = text;
 
   label.appendChild(span1);
   label.appendChild(span2);
+  console.log("Label for:", uniqueId);
   return label;
 }

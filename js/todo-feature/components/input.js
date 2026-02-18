@@ -1,3 +1,5 @@
+import { completed } from "/js/todo-feature/completed-task.js";
+
 export function createInput(uniqueId) {
   const input = document.createElement("input");
   input.type = "checkbox";
@@ -5,15 +7,8 @@ export function createInput(uniqueId) {
   input.id = uniqueId;
   input.style.display = "none";
   input.addEventListener("change", function () {
-    const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
-    if (this.checked) {
-      const task = tasks.find((task) => task.id === this.id);
-      if (task) {
-        task.status = "completed";
-        localStorage.setItem("tasks", JSON.stringify(tasks));
-        console.log(task.status);
-      }
-    }
+    completed(this.id, this.checked);
   });
+  console.log("Input id:", input.id);
   return input;
 }
