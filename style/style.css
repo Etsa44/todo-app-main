@@ -1,7 +1,7 @@
 :root {
   --bg-color: hsl(0, 0%, 98%);
-  --bg-image: url(/images/bg-mobile-light.jpg);
-  --bg-image-desktop: url(/images/bg-desktop-light.jpg);
+  --bg-image: url(/assets/images/bg-mobile-light.jpg);
+  --bg-image-desktop: url(/assets/images/bg-desktop-light.jpg);
   --bg-form-color: white;
   --text-color: black;
   --text-color-2: hsl(234, 11%, 52%);
@@ -9,8 +9,8 @@
 }
 :root.dark {
   --bg-color: hsl(235, 21%, 11%);
-  --bg-image: url(/images/bg-mobile-dark.jpg);
-  --bg-image-desktop: url(/images/bg-desktop-dark.jpg);
+  --bg-image: url(/assets/images/bg-mobile-dark.jpg);
+  --bg-image-desktop: url(/assets/images/bg-desktop-dark.jpg);
   --border-b: hsl(233, 14%, 35%);
   --bg-form-color: hsl(235, 24%, 19%);
   --text-color: white;
