@@ -1,6 +1,6 @@
-import { createInput } from "./components/input.js";
-import { createLabel } from "./components/label.js";
-import { createDeleteButton } from "./components/delete-button.js";
+import { createInput } from "/js/view/components/todo/input.js";
+import { createLabel } from "/js/view/components/todo/label.js";
+import { createDeleteButton } from "/js/view/components/todo/delete-button.js";
 
 export function createTask(text, uniqueId) {
   const li = document.createElement("li");

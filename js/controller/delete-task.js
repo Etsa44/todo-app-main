@@ -1,5 +1,7 @@
+import { getTask } from "/js/model/get-item.js";
+
 export function deleteTask(id, id2) {
-  const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+  const tasks = getTask();
   const updatedTasks = tasks.filter((task) => task.id !== id);
   localStorage.setItem("tasks", JSON.stringify(updatedTasks));
 

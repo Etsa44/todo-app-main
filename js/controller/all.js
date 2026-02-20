@@ -1,9 +1,9 @@
-import { createTask } from "/js/todo-feature/create-task-container.js";
+import { createTask } from "/js/view/components/todo/li.js";
+import { getTask } from "/js/model/get-item.js";
 
 const todoList = document.getElementById("todo-list");
 const allTask = document.getElementById("all");
-const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
-
+const tasks = getTask();
 allTask.addEventListener("click", () => {
   tasks.forEach((task) => {
     const taskNode = createTask(task.tache);

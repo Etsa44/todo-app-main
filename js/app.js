@@ -1,12 +1,13 @@
-import { createTask } from "./todo-feature/create-task-container.js";
-import { countTasks } from "./count-tasks.js";
+import { createTask } from "/js/view/components/todo/li.js";
+import { countTasks } from "/js/controller/count-tasks.js";
+import { getTask } from "/js/model/get-item.js";
 
 const todoInput = document.getElementById("input_text");
 const checkBox = document.getElementById("cbx-12");
 const todoList = document.getElementById("todo-list");
 const tasksNumberContainer = document.getElementById("tasksNumberContainer");
 const allTask = document.getElementById("all");
-const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+const tasks = getTask();
 
 tasksNumberContainer.prepend(countTasks());
 

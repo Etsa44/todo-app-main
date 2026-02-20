@@ -1,4 +1,4 @@
-import { completed } from "/js/todo-feature/completed-task.js";
+import { completed } from "/js/controller/completed-task.js";
 
 export function createInput(uniqueId) {
   const input = document.createElement("input");

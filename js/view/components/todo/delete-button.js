@@ -1,4 +1,4 @@
-import { deleteTask } from "/js/todo-feature/delete-task.js";
+import { deleteTask } from "/js/controller/delete-task.js";
 export function createDeleteButton(uniqueId, liId) {
   const deleteBtn = document.createElement("button");
   deleteBtn.className = "close-btn";
